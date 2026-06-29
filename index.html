@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joshua Obiora · Virtual Systems Architect & VA</title>
+    <meta name="description"
+        content="Virtual Systems Architect & Full-Stack Developer. Architecture over Hustle — building digital frameworks that eliminate administrative friction." />
+
+    <!-- ============================================
+    FAVICON
+    ============================================ -->
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png" />
+    <link rel="manifest" href="./assets/site.webmanifest" />
+
+    <!-- ============================================
+    SOCIAL PREVIEW (Open Graph / Twitter Cards)
+    ============================================ -->
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Joshua Obiora · Virtual Systems Architect & VA" />
+    <meta property="og:description"
+        content="Virtual Systems Architect & Full-Stack Developer. Architecture over Hustle — building digital frameworks that eliminate administrative friction." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://iamsalvation.github.io/joshua_portfolio/" />
+    <meta property="og:image" content="https://iamsalvation.github.io/joshua_portfolio/assets/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Joshua Obiora - Virtual Systems Architect & VA" />
+    <meta property="og:site_name" content="Joshua Obiora Portfolio" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Joshua Obiora · Virtual Systems Architect & VA" />
+    <meta name="twitter:description"
+        content="Virtual Systems Architect & Full-Stack Developer. Architecture over Hustle — building digital frameworks that eliminate administrative friction." />
+    <meta name="twitter:image" content="https://iamsalvation.github.io/joshua_portfolio/assets/og-image.png" />
+    <meta name="twitter:image:alt" content="Joshua Obiora - Virtual Systems Architect & VA" />
+    <meta name="twitter:site" content="@i_amsalvation" />
+    <meta name="twitter:creator" content="@i_amsalvation" />
+
+    <!-- ============================================
+    PRELOAD HERO IMAGE
+    ============================================ -->
+    <link rel="preload" as="image" href="./assets/joshua.png" type="image/png" />
+    <link rel="preload" as="image" href="./assets/og-image.png" type="image/png" />
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap"
+        rel="stylesheet" />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- =============================================
+  PROGRESS BAR
+  ============================================= -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- =============================================
+  NOISE TEXTURE OVERLAY
+  ============================================= -->
+    <div class="noise-overlay"></div>
+
+    <!-- =============================================
+  GLOW TRAIL
+  ============================================= -->
+    <div class="glow-trail" id="glowTrail"></div>
+
+    <!-- =============================================
+  CUSTOM CURSOR
+  ============================================= -->
+    <div class="custom-cursor" id="customCursor"></div>
+
+    <!-- =============================================
+  NAVIGATION
+  ============================================= -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <div class="logo">JO<span>.</span></div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- =============================================
+  HERO (with Typewriter Effect & Gradient Text)
+  ============================================= -->
+    <section class="hero section-hidden" id="hero">
+        <div class="particles-container" id="particlesContainer"></div>
+
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">✦ Virtual Systems Architect &amp; VA</div>
+                <h1 class="hero-title gradient-text">
+                    <span class="hero-sub-brand">Architecture</span>
+                    <span class="hero-brand">Over</span>
+                    <span class="hero-sub-brand">Hustle</span>
+                </h1>
+                <p class="hero-subtitle" id="typewriterText"></p>
+                <div class="hero-trust-badges">
+                    <span><i class="fas fa-check-circle"></i> ALX Certified VA</span>
+                    <span><i class="fas fa-check-circle"></i> CCSS & HRMA Certified</span>
+                    <span><i class="fas fa-check-circle"></i> B.Sc. Ed Biology</span>
+                    <span><i class="fas fa-check-circle"></i> 6+ Years Experience</span>
+                </div>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary btn-ripple">Book a Strategy Call</a>
+                    <a href="#portfolio" class="btn btn-outline">View My Work</a>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <strong class="counter" data-target="500">0</strong>
+                    <span>Connections</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <strong class="counter" data-target="2850">0</strong>
+                    <span>Followers</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <strong class="counter" data-target="50">0</strong>
+                    <span>Projects</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+  ABOUT (with Bubble Rise Effect on Entire Section)
+  ============================================= -->
+    <section class="about section-hidden" id="about">
+        <!-- About Bubble Rise Container -->
+        <div class="about-bubbles-container" id="aboutBubblesContainer"></div>
+
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <span class="section-tag">About Me</span>
+                    <h2 class="section-title">
+                        The truth about fast-scaling founders, corporate executives, and premium training consultancies
+                        is simple.
+                    </h2>
+                    <blockquote class="about-quote">
+                        They don't fracture due to a lack of vision. They experience <em>drag</em> because their
+                        backend digital workspaces and administrative infrastructure buckle under growth.
+                    </blockquote>
+                    <p>
+                        That is where I step in. I am a <strong>Virtual Systems Architect</strong>,
+                        <strong>Virtual Assistant</strong>, and <strong>Full-Stack Developer</strong> driven by a core
+                        professional philosophy:
+                    </p>
+                    <div class="philosophy-badge shimmer">
+                        <i class="fas fa-crown"></i>
+                        <span>Architecture over Hustle</span>
+                    </div>
+                    <p>
+                        I don't operate as a passive, disconnected task-runner. I <strong>engineer and protect</strong>
+                        the digital frameworks that eliminate administrative friction, secure data integrity, and
+                        build high-authority online presences.
+                    </p>
+                    <div class="about-certs">
+                        <span><i class="fas fa-certificate"></i> ALX Certified VA</span>
+                        <span><i class="fas fa-certificate"></i> CCSS Certified</span>
+                        <span><i class="fas fa-certificate"></i> HRMA Certified</span>
+                        <span><i class="fas fa-certificate"></i> B.Sc. Ed Biology</span>
+                    </div>
+                </div>
+                <div class="about-image-wrapper" id="aboutImageWrapper">
+                    <div class="about-image-frame" id="aboutImageFrame">
+                        <div class="about-image-inner" id="aboutImageInner">
+                            <img src="./assets/joshua.png" alt="Joshua Obiora" />
+                            <div class="about-image-glow" id="aboutImageGlow"></div>
+                        </div>
+                        <div class="about-frame-accent"></div>
+                        <div class="about-frame-corner tl"></div>
+                        <div class="about-frame-corner tr"></div>
+                        <div class="about-frame-corner bl"></div>
+                        <div class="about-frame-corner br"></div>
+                    </div>
+                    <!-- ALX Certified Virtual Assistant Tag Under Image -->
+                    <div class="about-image-tag shimmer">
+                        <span class="tag-icon"><i class="fas fa-certificate"></i></span>
+                        <span class="tag-text">ALX Certified Virtual Assistant</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+  SERVICES (6 Operational Pillars with Shimmer Effect)
+  ============================================= -->
+    <section class="services section-hidden" id="services">
+        <div class="container">
+            <span class="section-tag">What I Do</span>
+            <h2 class="section-title">My <span>Operational Pillars</span></h2>
+            <p class="section-sub">Six core service areas built for precision, scale, and results. Click "View Case
+                Study" to see each pillar in action.</p>
+
+            <div class="services-grid">
+                <div class="service-card glass-card tilt-card card-glow reveal-card shimmer">
+                    <div class="service-icon"><i class="fas fa-code"></i></div>
+                    <h3>Full-Stack Web Development &amp; Portfolio Design</h3>
+                    <p>High-converting, professional portfolios that establish instant credibility.</p>
+                    <ul class="service-features">
+                        <li>Clean HTML/CSS/JS Architecture</li>
+                        <li>Deployment &amp; Hosting</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                    <button class="case-study-btn" data-case="webdev">View Case Study <i
+                            class="fas fa-arrow-right"></i></button>
+                </div>
+
+                <div class="service-card glass-card tilt-card card-glow reveal-card shimmer">
+                    <div class="service-icon"><i class="fas fa-inbox"></i></div>
+                    <h3>High-Volume Inbox &amp; Corporate Correspondence</h3>
+                    <p>Overhauling high-friction mailboxes into structured communication streams.</p>
+                    <ul class="service-features">
+                        <li>Inbox Architecture</li>
+                        <li>Response Loop Management</li>
+                        <li>Email Prioritization</li>
+                    </ul>
+                    <button class="case-study-btn" data-case="inbox">View Case Study <i
+                            class="fas fa-arrow-right"></i></button>
+                </div>
+
+                <div class="service-card glass-card tilt-card card-glow reveal-card shimmer">
+                    <div class="service-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <h3>Cross-Time Zone Calendar Optimization</h3>
+                    <p>Building frictionless scheduling architectures and shielding your calendar from time-leaks.</p>
+                    <ul class="service-features">
+                        <li>Calendar Architecture</li>
+                        <li>Meeting Prep &amp; Briefs</li>
+                        <li>Time-Leak Protection</li>
+                    </ul>
+                    <button class="case-study-btn" data-case="calendar">View Case Study <i
+                            class="fas fa-arrow-right"></i></button>
+                </div>
+
+                <div class="service-card glass-card tilt-card card-glow reveal-card shimmer">
+                    <div class="service-icon"><i class="fas fa-table"></i></div>
+                    <h3>Pristine Data &amp; Sheet Architecture</h3>
+                    <p>Constructing single-source-of-truth spreadsheets with mathematical accuracy.</p>
+                    <ul class="service-features">
+                        <li>Sheet Architecture</li>
+                        <li>Data Validation</li>
+                        <li>Automated Forms</li>
+                    </ul>
+                    <button class="case-study-btn" data-case="data">View Case Study <i
+                            class="fas fa-arrow-right"></i></button>
+                </div>
+
+                <div class="service-card glass-card tilt-card card-glow reveal-card shimmer">
+                    <div class="service-icon"><i class="fas fa-presentation"></i></div>
+                    <h3>Executive Presentation Design</h3>
+                    <p>Translating complex operational data into boardroom-ready slide decks.</p>
+                    <ul class="service-features">
+                        <li>Slide Deck Architecture</li>
+                        <li>Data Visualization</li>
+                        <li>Boardroom-Ready Design</li>
+                    </ul>
+                    <button class="case-study-btn" data-case="presentation">View Case Study <i
+                            class="fas fa-arrow-right"></i></button>
+                </div>
+
+                <div class="service-card glass-card tilt-card card-glow reveal-card shimmer">
+                    <div class="service-icon"><i class="fas fa-robot"></i></div>
+                    <h3>AI, Graphics &amp; Content Automation</h3>
+                    <p>Leveraging AI-driven workflows and professional graphics to scale your brand.</p>
+                    <ul class="service-features">
+                        <li>AI Workflow Automation</li>
+                        <li>Professional Graphics &amp; Branding</li>
+                        <li>Content Automation</li>
+                    </ul>
+                    <button class="case-study-btn" data-case="ai">View Case Study <i
+                            class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+  CASE STUDY MODAL
+  ============================================= -->
+    <div class="modal-overlay" id="caseModal">
+        <div class="modal">
+            <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+            <div class="modal-content" id="modalContent">
+                <!-- Dynamic content loaded via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- =============================================
+  EXPERIENCE
+  ============================================= -->
+    <section class="experience section-hidden" id="experience">
+        <div class="container">
+            <span class="section-tag">Experience</span>
+            <h2 class="section-title">Where I've <span>Worked</span></h2>
+
+            <div class="experience-timeline">
+                <div class="exp-item reveal-card">
+                    <div class="exp-marker"></div>
+                    <div class="exp-content glass-card tilt-card card-glow shimmer">
+                        <div class="exp-header">
+                            <h3>Mobile App Development Intern (Flutter)</h3>
+                            <span class="exp-company">Excelerate</span>
+                            <span class="exp-date">Jul 6, 2026 – Aug 6, 2026 · 1 mo</span>
+                        </div>
+                        <p class="exp-desc">Selected for a virtual internship focused on Flutter mobile app development.
+                            Building cross-platform mobile applications with modern UI/UX principles.</p>
+                        <div class="exp-skills">
+                            <span>Flutter</span>
+                            <span>Dart</span>
+                            <span>Mobile Development</span>
+                            <span>UI/UX</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-item reveal-card">
+                    <div class="exp-marker"></div>
+                    <div class="exp-content glass-card tilt-card card-glow shimmer">
+                        <div class="exp-header">
+                            <h3>Project Management Trainee</h3>
+                            <span class="exp-company">Excelerate</span>
+                            <span class="exp-date">Jun 1, 2026 – Jun 28, 2026 · 4 weeks</span>
+                        </div>
+                        <p class="exp-desc">Completed a virtual internship focused on project management methodologies,
+                            agile frameworks, and team collaboration.</p>
+                        <div class="exp-skills">
+                            <span>Project Management</span>
+                            <span>Agile</span>
+                            <span>Team Collaboration</span>
+                            <span>Project Planning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-item reveal-card">
+                    <div class="exp-marker"></div>
+                    <div class="exp-content glass-card tilt-card card-glow shimmer">
+                        <div class="exp-header">
+                            <h3>Weighbridge Operator</h3>
+                            <span class="exp-company">Pardee Food Nigeria</span>
+                            <span class="exp-date">Aug 2022 – Present · 3 yrs 11 mos</span>
+                        </div>
+                        <p class="exp-desc">Managed loading, unloading, movement and sorting of supplies. Audited and
+                            tracked high-volume data profiles for 50+ trucks daily with zero-error execution.</p>
+                        <div class="exp-skills">
+                            <span>Logistics</span>
+                            <span>Data Tracking</span>
+                            <span>Operations</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-item reveal-card">
+                    <div class="exp-marker"></div>
+                    <div class="exp-content glass-card tilt-card card-glow shimmer">
+                        <div class="exp-header">
+                            <h3>Full Stack Development Intern</h3>
+                            <span class="exp-company">Decodelabs</span>
+                            <span class="exp-date">May 2026 – Jun 2026 · 2 mos</span>
+                        </div>
+                        <p class="exp-desc">Contributed to the development of product features using modern full-stack
+                            technologies.</p>
+                        <div class="exp-skills">
+                            <span>HTML/CSS/JS</span>
+                            <span>React</span>
+                            <span>Node.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-item reveal-card">
+                    <div class="exp-marker"></div>
+                    <div class="exp-content glass-card tilt-card card-glow shimmer">
+                        <div class="exp-header">
+                            <h3>Intern</h3>
+                            <span class="exp-company">CodeAlpha</span>
+                            <span class="exp-date">May 2026 · 1 mo</span>
+                        </div>
+                        <p class="exp-desc">Focused on automation engineering, keying, and IT infrastructure
+                            development.</p>
+                        <div class="exp-skills">
+                            <span>Automation</span>
+                            <span>IT Infrastructure</span>
+                            <span>Programming</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-item reveal-card">
+                    <div class="exp-marker"></div>
+                    <div class="exp-content glass-card tilt-card card-glow shimmer">
+                        <div class="exp-header">
+                            <h3>Logistics Officer</h3>
+                            <span class="exp-company">Pardee Food Nigeria PLC</span>
+                            <span class="exp-date">Nov 2019 – Apr 2026 · 6 yrs 6 mos</span>
+                        </div>
+                        <p class="exp-desc">Managed loading, unloading, movement and sorting of supplies to keep
+                            deliveries on schedule.</p>
+                        <div class="exp-skills">
+                            <span>Logistics</span>
+                            <span>Supply Chain</span>
+                            <span>Operations Management</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+  PORTFOLIO (Blessing Ikpia Removed)
+  ============================================= -->
+    <section class="portfolio section-hidden" id="portfolio">
+        <div class="container">
+            <span class="section-tag">Portfolio</span>
+            <h2 class="section-title">Websites I've <span>Built</span></h2>
+            <p class="section-sub">Each project is architected with precision, intention, and a focus on results.</p>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-card glass-card tilt-card card-glow reveal-card shimmer">
+                    <div class="portfolio-thumb"><i class="fas fa-user-tie"></i></div>
+                    <h3>Damilola Adebayo — VA Coach</h3>
+                    <p>Professional coaching website with booking integration.</p>
+                    <a href="https://iamsalvation.github.io/damilola-portfolio/" target="_blank" rel="noopener"
+                        class="portfolio-link">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="portfolio-card glass-card tilt-card card-glow reveal-card shimmer">
+                    <div class="portfolio-thumb"><i class="fas fa-user-circle"></i></div>
+                    <h3>Wendy Onyiuke — AI Workflow Designer</h3>
+                    <p>AI-powered portfolio showcasing workflow design expertise.</p>
+                    <a href="https://iamsalvation.github.io/wendyonyiuke-portfolio/" target="_blank" rel="noopener"
+                        class="portfolio-link">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="portfolio-card glass-card tilt-card card-glow reveal-card shimmer">
+                    <div class="portfolio-thumb"><i class="fas fa-user-md"></i></div>
+                    <h3>Roseline Ogechukwu — VA</h3>
+                    <p>Customer support specialist portfolio with service packages.</p>
+                    <a href="https://iamsalvation.github.io/roseline-portfolio/" target="_blank" rel="noopener"
+                        class="portfolio-link">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="portfolio-card glass-card tilt-card card-glow reveal-card shimmer">
+                    <div class="portfolio-thumb"><i class="fas fa-user-astronaut"></i></div>
+                    <h3>Olayinka Ogundeji — The Catalyst VA</h3>
+                    <p>Full-featured VA portfolio with detailed service offerings.</p>
+                    <a href="https://iamsalvation.github.io/olayinka-portfolio/" target="_blank" rel="noopener"
+                        class="portfolio-link">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="portfolio-card glass-card tilt-card card-glow reveal-card shimmer">
+                    <div class="portfolio-thumb"><i class="fas fa-user-graduate"></i></div>
+                    <h3>Tiwa Adedeji — VA</h3>
+                    <p>Administrative support portfolio with booking integration.</p>
+                    <a href="https://iamsalvation.github.io/tiwa-adedeji-portfolio/" target="_blank" rel="noopener"
+                        class="portfolio-link">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="portfolio-card glass-card tilt-card card-glow reveal-card shimmer">
+                    <div class="portfolio-thumb"><i class="fas fa-user"></i></div>
+                    <h3>Chidinma — VA</h3>
+                    <p>Virtual assistant portfolio with service offerings.</p>
+                    <a href="https://iamsalvation.github.io/chidinma-va-portfolio/" target="_blank" rel="noopener"
+                        class="portfolio-link">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="portfolio-card glass-card tilt-card card-glow reveal-card shimmer">
+                    <div class="portfolio-thumb"><i class="fas fa-paint-brush"></i></div>
+                    <h3>Canva Design Portfolio</h3>
+                    <p>Curated collection of design work and brand assets.</p>
+                    <a href="https://canva.link/kjpssgvcnzpkikp" target="_blank" rel="noopener"
+                        class="portfolio-link">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="portfolio-card glass-card tilt-card card-glow reveal-card shimmer">
+                    <div class="portfolio-thumb"><i class="fas fa-home"></i></div>
+                    <h3>Your Portfolio — Systems Hub</h3>
+                    <p>Your personal portfolio showcasing all your work.</p>
+                    <a href="https://iamsalvation.github.io/joshua_portfolio/" target="_blank" rel="noopener"
+                        class="portfolio-link">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+  GALLERY (Image-Based Auto-Moving Carousel)
+  ============================================= -->
+    <section class="gallery section-hidden" id="gallery">
+        <div class="container">
+            <span class="section-tag">Gallery</span>
+            <h2 class="section-title">Work <span>Showcase</span></h2>
+            <p class="section-sub">Visual evidence of the work I've delivered — portfolios, designs, and systems I've
+                built. <strong>Click any card to learn more.</strong></p>
+
+            <div class="gallery-carousel-container">
+                <div class="gallery-carousel-track" id="galleryTrack">
+                    <!-- Gallery Card 1 - Calendar Management -->
+                    <div class="gallery-card glass-card card-glow shimmer">
+                        <a href="#" class="gallery-link" data-gallery="calendar">
+                            <div class="gallery-image">
+                                <img src="./assets/Calendar.png" alt="Calendar Management" loading="lazy" decoding="async" />
+                                <div class="gallery-overlay">
+                                    <h4>Calendar Management</h4>
+                                    <p>Cross-time zone scheduling & time-leak protection</p>
+                                    <span class="gallery-cta">View More →</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Gallery Card 2 - File Management -->
+                    <div class="gallery-card glass-card card-glow shimmer">
+                        <a href="#" class="gallery-link" data-gallery="file">
+                            <div class="gallery-image">
+                                <img src="./assets/File.png" alt="File Management" loading="lazy" decoding="async" />
+                                <div class="gallery-overlay">
+                                    <h4>File Management</h4>
+                                    <p>Structured Google Drive architecture & organization</p>
+                                    <span class="gallery-cta">View More →</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Gallery Card 3 - Project Tracker -->
+                    <div class="gallery-card glass-card card-glow shimmer">
+                        <a href="#" class="gallery-link" data-gallery="project">
+                            <div class="gallery-image">
+                                <img src="./assets/Tracker.png" alt="Project Tracker" loading="lazy" decoding="async" />
+                                <div class="gallery-overlay">
+                                    <h4>Project Tracker</h4>
+                                    <p>Trello, Asana & Notion project tracking systems</p>
+                                    <span class="gallery-cta">View More →</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Gallery Card 4 - Booking & Scheduling -->
+                    <div class="gallery-card glass-card card-glow shimmer">
+                        <a href="#" class="gallery-link" data-gallery="booking">
+                            <div class="gallery-image">
+                                <img src="./assets/Booking&Schedule.png" alt="Booking & Scheduling" loading="lazy" decoding="async" />
+                                <div class="gallery-overlay">
+                                    <h4>Booking & Scheduling</h4>
+                                    <p>Calendly integration & client booking systems</p>
+                                    <span class="gallery-cta">View More →</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Gallery Card 5 - Zapier Workflow Automation -->
+                    <div class="gallery-card glass-card card-glow shimmer">
+                        <a href="#" class="gallery-link" data-gallery="zapier">
+                            <div class="gallery-image">
+                                <img src="./assets/Zapier.png" alt="Zapier Workflow Automation" loading="lazy" decoding="async" />
+                                <div class="gallery-overlay">
+                                    <h4>Zapier Workflow Automation</h4>
+                                    <p>Automated workflows connecting your favorite apps</p>
+                                    <span class="gallery-cta">View More →</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Gallery Card 6 - Google Docs & Sheets -->
+                    <div class="gallery-card glass-card card-glow shimmer">
+                        <a href="#" class="gallery-link" data-gallery="docs">
+                            <div class="gallery-image">
+                                <img src="./assets/Doc.png" alt="Google Docs & Sheets" loading="lazy" decoding="async" />
+                                <div class="gallery-overlay">
+                                    <h4>Google Docs & Sheets</h4>
+                                    <p>Professional document & advanced spreadsheet architecture</p>
+                                    <span class="gallery-cta">View More →</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Gallery Card 7 - Email Management -->
+                    <div class="gallery-card glass-card card-glow shimmer">
+                        <a href="#" class="gallery-link" data-gallery="email">
+                            <div class="gallery-image">
+                                <img src="./assets/Email.png" alt="Email Management" loading="lazy" decoding="async" />
+                                <div class="gallery-overlay">
+                                    <h4>Email Management</h4>
+                                    <p>Inbox architecture, filtering & response loop management</p>
+                                    <span class="gallery-cta">View More →</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Gallery Card 8 - Travel Itinerary -->
+                    <div class="gallery-card glass-card card-glow shimmer">
+                        <a href="#" class="gallery-link" data-gallery="travel">
+                            <div class="gallery-image">
+                                <img src="./assets/Travel.png" alt="Travel Itinerary" loading="lazy" decoding="async" />
+                                <div class="gallery-overlay">
+                                    <h4>Travel Itinerary</h4>
+                                    <p>Hassle-free itinerary coordination & booking management</p>
+                                    <span class="gallery-cta">View More →</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Gallery Card 9 - Research & Data Entry -->
+                    <div class="gallery-card glass-card card-glow shimmer">
+                        <a href="#" class="gallery-link" data-gallery="research">
+                            <div class="gallery-image">
+                                <img src="./assets/Research.png" alt="Research & Data Entry" loading="lazy" decoding="async" />
+                                <div class="gallery-overlay">
+                                    <h4>Research & Data Entry</h4>
+                                    <p>Detailed research, data collection & accurate entry</p>
+                                    <span class="gallery-cta">View More →</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Gallery Card 10 - Damilola's Portfolio -->
+                    <div class="gallery-card glass-card card-glow shimmer">
+                        <a href="#" class="gallery-link" data-gallery="damilola">
+                            <div class="gallery-image">
+                                <img src="./assets/Dami.png" alt="Damilola's Portfolio" loading="lazy" decoding="async" />
+                                <div class="gallery-overlay">
+                                    <h4>Damilola's Portfolio</h4>
+                                    <p>VA Coach Website</p>
+                                    <span class="gallery-cta">View More →</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Gallery Card 11 - Wendy's Portfolio -->
+                    <div class="gallery-card glass-card card-glow shimmer">
+                        <a href="#" class="gallery-link" data-gallery="wendy">
+                            <div class="gallery-image">
+                                <img src="./assets/Wendy.png" alt="Wendy's Portfolio" loading="lazy" decoding="async" />
+                                <div class="gallery-overlay">
+                                    <h4>Wendy's Portfolio</h4>
+                                    <p>AI Workflow Designer</p>
+                                    <span class="gallery-cta">View More →</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Gallery Card 12 - Roseline's Portfolio -->
+                    <div class="gallery-card glass-card card-glow shimmer">
+                        <a href="#" class="gallery-link" data-gallery="roseline">
+                            <div class="gallery-image">
+                                <img src="./assets/Rose.png" alt="Roseline's Portfolio" loading="lazy" decoding="async" />
+                                <div class="gallery-overlay">
+                                    <h4>Roseline's Portfolio</h4>
+                                    <p>Customer Support Specialist</p>
+                                    <span class="gallery-cta">View More →</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <button class="gallery-carousel-btn prev" id="galleryPrev"><i class="fas fa-chevron-left"></i></button>
+                <button class="gallery-carousel-btn next" id="galleryNext"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="gallery-dots" id="galleryDots"></div>
+        </div>
+    </section>
+
+    <!-- =============================================
+  GALLERY DETAIL MODAL
+  ============================================= -->
+    <div class="gallery-modal-overlay" id="galleryModal">
+        <div class="gallery-modal">
+            <button class="gallery-modal-close" id="galleryModalClose"><i class="fas fa-times"></i></button>
+            <div class="gallery-modal-content" id="galleryModalContent">
+                <!-- Dynamic content loaded via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- =============================================
+  TOOLS & BRANDS CAROUSEL
+  ============================================= -->
+    <section class="tools-brands section-hidden" id="tools-brands">
+        <div class="container">
+            <span class="section-tag">Ecosystem</span>
+            <h2 class="section-title">Tools &amp; <span>Brands</span></h2>
+
+            <!-- Tools Marquee -->
+            <div class="tools-marquee-wrapper">
+                <div class="tools-marquee-track" id="toolsTrack">
+                    <span class="tool-marquee-item"><i class="fas fa-video"></i> Zoom</span>
+                    <span class="tool-marquee-item"><i class="fas fa-video"></i> Google Meet</span>
+                    <span class="tool-marquee-item"><i class="fas fa-calendar-alt"></i> Calendly</span>
+                    <span class="tool-marquee-item"><i class="fas fa-robot"></i> Gemini</span>
+                    <span class="tool-marquee-item"><i class="fas fa-robot"></i> ChatGPT</span>
+                    <span class="tool-marquee-item"><i class="fas fa-cloud"></i> Dropbox</span>
+                    <span class="tool-marquee-item"><i class="fas fa-cloud"></i> Google Drive</span>
+                    <span class="tool-marquee-item"><i class="fas fa-brain"></i> Notion</span>
+                    <span class="tool-marquee-item"><i class="fas fa-robot"></i> DeepSeek</span>
+                    <span class="tool-marquee-item"><i class="fas fa-robot"></i> Copilot</span>
+                    <span class="tool-marquee-item"><i class="fas fa-users"></i> Teams</span>
+                    <span class="tool-marquee-item"><i class="fas fa-bullhorn"></i> Hootsuite</span>
+                    <span class="tool-marquee-item"><i class="fas fa-crm"></i> HubSpot</span>
+                    <span class="tool-marquee-item"><i class="fas fa-book"></i> QuickBooks</span>
+                    <span class="tool-marquee-item"><i class="fas fa-file-alt"></i> Google Docs</span>
+                    <span class="tool-marquee-item"><i class="fas fa-table"></i> Google Sheets</span>
+                    <span class="tool-marquee-item"><i class="fas fa-tasks"></i> Asana</span>
+                    <span class="tool-marquee-item"><i class="fab fa-trello"></i> Trello</span>
+                    <span class="tool-marquee-item"><i class="fab fa-slack"></i> Slack</span>
+                    <span class="tool-marquee-item"><i class="fab fa-canva"></i> Canva</span>
+                    <span class="tool-marquee-item"><i class="fab fa-microsoft"></i> Microsoft 365</span>
+                    <span class="tool-marquee-item"><i class="fas fa-envelope"></i> Outlook</span>
+                    <span class="tool-marquee-item"><i class="fas fa-check-circle"></i> To Do</span>
+                    <span class="tool-marquee-item"><i class="fas fa-paint-brush"></i> CorelDRAW</span>
+                    <span class="tool-marquee-item"><i class="fab fa-js"></i> JavaScript</span>
+                    <span class="tool-marquee-item"><i class="fab fa-css3-alt"></i> CSS</span>
+                    <span class="tool-marquee-item"><i class="fab fa-html5"></i> HTML</span>
+                    <span class="tool-marquee-item"><i class="fas fa-database"></i> MongoDB</span>
+                    <span class="tool-marquee-item"><i class="fas fa-bolt"></i> Zapier</span>
+                    <span class="tool-marquee-item"><i class="fab fa-github"></i> GitHub</span>
+                    <span class="tool-marquee-item"><i class="fas fa-code"></i> VS Code</span>
+                    <span class="tool-marquee-item"><i class="fas fa-database"></i> MySQL</span>
+                    <!-- Duplicate for seamless loop -->
+                    <span class="tool-marquee-item"><i class="fas fa-video"></i> Zoom</span>
+                    <span class="tool-marquee-item"><i class="fas fa-video"></i> Google Meet</span>
+                    <span class="tool-marquee-item"><i class="fas fa-calendar-alt"></i> Calendly</span>
+                    <span class="tool-marquee-item"><i class="fas fa-robot"></i> Gemini</span>
+                    <span class="tool-marquee-item"><i class="fas fa-robot"></i> ChatGPT</span>
+                    <span class="tool-marquee-item"><i class="fas fa-cloud"></i> Dropbox</span>
+                    <span class="tool-marquee-item"><i class="fas fa-cloud"></i> Google Drive</span>
+                    <span class="tool-marquee-item"><i class="fas fa-brain"></i> Notion</span>
+                    <span class="tool-marquee-item"><i class="fas fa-robot"></i> DeepSeek</span>
+                    <span class="tool-marquee-item"><i class="fas fa-robot"></i> Copilot</span>
+                    <span class="tool-marquee-item"><i class="fas fa-users"></i> Teams</span>
+                    <span class="tool-marquee-item"><i class="fas fa-bullhorn"></i> Hootsuite</span>
+                    <span class="tool-marquee-item"><i class="fas fa-crm"></i> HubSpot</span>
+                    <span class="tool-marquee-item"><i class="fas fa-book"></i> QuickBooks</span>
+                    <span class="tool-marquee-item"><i class="fas fa-file-alt"></i> Google Docs</span>
+                    <span class="tool-marquee-item"><i class="fas fa-table"></i> Google Sheets</span>
+                    <span class="tool-marquee-item"><i class="fas fa-tasks"></i> Asana</span>
+                    <span class="tool-marquee-item"><i class="fab fa-trello"></i> Trello</span>
+                    <span class="tool-marquee-item"><i class="fab fa-slack"></i> Slack</span>
+                    <span class="tool-marquee-item"><i class="fab fa-canva"></i> Canva</span>
+                    <span class="tool-marquee-item"><i class="fab fa-microsoft"></i> Microsoft 365</span>
+                    <span class="tool-marquee-item"><i class="fas fa-envelope"></i> Outlook</span>
+                    <span class="tool-marquee-item"><i class="fas fa-check-circle"></i> To Do</span>
+                    <span class="tool-marquee-item"><i class="fas fa-paint-brush"></i> CorelDRAW</span>
+                    <span class="tool-marquee-item"><i class="fab fa-js"></i> JavaScript</span>
+                    <span class="tool-marquee-item"><i class="fab fa-css3-alt"></i> CSS</span>
+                    <span class="tool-marquee-item"><i class="fab fa-html5"></i> HTML</span>
+                    <span class="tool-marquee-item"><i class="fas fa-database"></i> MongoDB</span>
+                    <span class="tool-marquee-item"><i class="fas fa-bolt"></i> Zapier</span>
+                    <span class="tool-marquee-item"><i class="fab fa-github"></i> GitHub</span>
+                    <span class="tool-marquee-item"><i class="fas fa-code"></i> VS Code</span>
+                    <span class="tool-marquee-item"><i class="fas fa-database"></i> MySQL</span>
+                </div>
+            </div>
+
+            <!-- Brands Carousel with Logos -->
+            <div class="brands-carousel-container">
+                <div class="brands-carousel-track" id="brandsTrack">
+                    <div class="brand-item">
+                        <div class="brand-logo-placeholder" style="background: #2A4B7C;">
+                            <span>Pardee</span>
+                        </div>
+                        <span class="brand-name">Pardee Food</span>
+                    </div>
+                    <div class="brand-item">
+                        <div class="brand-logo-placeholder" style="background: #1A3A5C;">
+                            <span>DL</span>
+                        </div>
+                        <span class="brand-name">Decodelabs</span>
+                    </div>
+                    <div class="brand-item">
+                        <div class="brand-logo-placeholder" style="background: #2A4B7C;">
+                            <span>CA</span>
+                        </div>
+                        <span class="brand-name">CodeAlpha</span>
+                    </div>
+                    <div class="brand-item">
+                        <div class="brand-logo-placeholder" style="background: #1A3A5C;">
+                            <span>DCA</span>
+                        </div>
+                        <span class="brand-name">Digital Craft</span>
+                    </div>
+                    <div class="brand-item">
+                        <div class="brand-logo-placeholder" style="background: #2A4B7C;">
+                            <span>ALX</span>
+                        </div>
+                        <span class="brand-name">ALX Africa</span>
+                    </div>
+                    <div class="brand-item">
+                        <div class="brand-logo-placeholder" style="background: #1A3A5C;">
+                            <span>CSIA</span>
+                        </div>
+                        <span class="brand-name">CSIA</span>
+                    </div>
+                    <div class="brand-item">
+                        <div class="brand-logo-placeholder" style="background: #2A4B7C;">
+                            <span>MN</span>
+                        </div>
+                        <span class="brand-name">MacNel Consult</span>
+                    </div>
+                    <div class="brand-item">
+                        <div class="brand-logo-placeholder" style="background: #1A3A5C;">
+                            <span>NYSC</span>
+                        </div>
+                        <span class="brand-name">NYSC</span>
+                    </div>
+                    <div class="brand-item">
+                        <div class="brand-logo-placeholder" style="background: #2A4B7C;">
+                            <span>EX</span>
+                        </div>
+                        <span class="brand-name">Excelerate</span>
+                    </div>
+                    <div class="brand-item">
+                        <div class="brand-logo-placeholder" style="background: #8B4513;">
+                            <span>JC</span>
+                        </div>
+                        <span class="brand-name">Jums Cakes</span>
+                    </div>
+                    <div class="brand-item">
+                        <div class="brand-logo-placeholder" style="background: #2A4B7C;">
+                            <span>CO</span>
+                        </div>
+                        <span class="brand-name">Code On</span>
+                    </div>
+                    <div class="brand-item">
+                        <div class="brand-logo-placeholder" style="background: #1A3A5C;">
+                            <span>AB</span>
+                        </div>
+                        <span class="brand-name">App Brewery</span>
+                    </div>
+                    <div class="brand-item">
+                        <div class="brand-logo-placeholder" style="background: #2A4B7C;">
+                            <span>CM</span>
+                        </div>
+                        <span class="brand-name">Creative Mind</span>
+                    </div>
+                    <div class="brand-item">
+                        <div class="brand-logo-placeholder" style="background: #8B4513;">
+                            <span>JR</span>
+                        </div>
+                        <span class="brand-name">JCrown</span>
+                    </div>
+                    <div class="brand-item">
+                        <div class="brand-logo-placeholder" style="background: #D4AF37;">
+                            <span>CC</span>
+                        </div>
+                        <span class="brand-name">Cindy Cakes</span>
+                    </div>
+                    <div class="brand-item">
+                        <div class="brand-logo-placeholder" style="background: #8B4513;">
+                            <span>BE</span>
+                        </div>
+                        <span class="brand-name">Beabah Cakes</span>
+                    </div>
+                    <div class="brand-item">
+                        <div class="brand-logo-placeholder" style="background: #2A4B7C;">
+                            <span>JM</span>
+                        </div>
+                        <span class="brand-name">Jums Merchandise</span>
+                    </div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="brand-item">
+                        <div class="brand-logo-placeholder" style="background: #2A4B7C;">
+                            <span>Pardee</span>
+                        </div>
+                        <span class="brand-name">Pardee Food</span>
+                    </div>
+                    <div class="brand-item">
+                        <div class="brand-logo-placeholder" style="background: #1A3A5C;">
+                            <span>DL</span>
+                        </div>
+                        <span class="brand-name">Decodelabs</span>
+                    </div>
+                    <div class="brand-item">
+                        <div class="brand-logo-placeholder" style="background: #2A4B7C;">
+                            <span>CA</span>
+                        </div>
+                        <span class="brand-name">CodeAlpha</span>
+                    </div>
+                    <div class="brand-item">
+                        <div class="brand-logo-placeholder" style="background: #1A3A5C;">
+                            <span>DCA</span>
+                        </div>
+                        <span class="brand-name">Digital Craft</span>
+                    </div>
+                    <div class="brand-item">
+                        <div class="brand-logo-placeholder" style="background: #2A4B7C;">
+                            <span>ALX</span>
+                        </div>
+                        <span class="brand-name">ALX Africa</span>
+                    </div>
+                    <div class="brand-item">
+                        <div class="brand-logo-placeholder" style="background: #1A3A5C;">
+                            <span>CSIA</span>
+                        </div>
+                        <span class="brand-name">CSIA</span>
+                    </div>
+                    <div class="brand-item">
+                        <div class="brand-logo-placeholder" style="background: #2A4B7C;">
+                            <span>MN</span>
+                        </div>
+                        <span class="brand-name">MacNel Consult</span>
+                    </div>
+                    <div class="brand-item">
+                        <div class="brand-logo-placeholder" style="background: #1A3A5C;">
+                            <span>NYSC</span>
+                        </div>
+                        <span class="brand-name">NYSC</span>
+                    </div>
+                    <div class="brand-item">
+                        <div class="brand-logo-placeholder" style="background: #2A4B7C;">
+                            <span>EX</span>
+                        </div>
+                        <span class="brand-name">Excelerate</span>
+                    </div>
+                    <div class="brand-item">
+                        <div class="brand-logo-placeholder" style="background: #8B4513;">
+                            <span>JC</span>
+                        </div>
+                        <span class="brand-name">Jums Cakes</span>
+                    </div>
+                    <div class="brand-item">
+                        <div class="brand-logo-placeholder" style="background: #2A4B7C;">
+                            <span>CO</span>
+                        </div>
+                        <span class="brand-name">Code On</span>
+                    </div>
+                    <div class="brand-item">
+                        <div class="brand-logo-placeholder" style="background: #1A3A5C;">
+                            <span>AB</span>
+                        </div>
+                        <span class="brand-name">App Brewery</span>
+                    </div>
+                    <div class="brand-item">
+                        <div class="brand-logo-placeholder" style="background: #2A4B7C;">
+                            <span>CM</span>
+                        </div>
+                        <span class="brand-name">Creative Mind</span>
+                    </div>
+                    <div class="brand-item">
+                        <div class="brand-logo-placeholder" style="background: #8B4513;">
+                            <span>JR</span>
+                        </div>
+                        <span class="brand-name">JCrown</span>
+                    </div>
+                    <div class="brand-item">
+                        <div class="brand-logo-placeholder" style="background: #D4AF37;">
+                            <span>CC</span>
+                        </div>
+                        <span class="brand-name">Cindy Cakes</span>
+                    </div>
+                    <div class="brand-item">
+                        <div class="brand-logo-placeholder" style="background: #8B4513;">
+                            <span>BE</span>
+                        </div>
+                        <span class="brand-name">Beabah Cakes</span>
+                    </div>
+                    <div class="brand-item">
+                        <div class="brand-logo-placeholder" style="background: #2A4B7C;">
+                            <span>JM</span>
+                        </div>
+                        <span class="brand-name">Jums Merchandise</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+  CERTIFICATIONS
+  ============================================= -->
+    <section class="certifications section-hidden" id="certifications">
+        <div class="container">
+            <span class="section-tag">Credentials</span>
+            <h2 class="section-title">Licenses &amp; <span>Certifications</span></h2>
+
+            <div class="certs-grid">
+                <div class="cert-card glass-card card-glow reveal-card shimmer">
+                    <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                    <h4>Certificate of Completion for Virtual Assistant</h4>
+                    <p class="cert-issuer">alx_africa</p>
+                    <p class="cert-date">Issued May 2026</p>
+                </div>
+
+                <div class="cert-card glass-card card-glow reveal-card shimmer">
+                    <div class="cert-icon"><i class="fas fa-award"></i></div>
+                    <h4>CCSS — Customer Service Certification</h4>
+                    <p class="cert-issuer">CSIA | Customer Service Institute of America</p>
+                    <p class="cert-date">Issued Jul 2021</p>
+                </div>
+
+                <div class="cert-card glass-card card-glow reveal-card shimmer">
+                    <div class="cert-icon"><i class="fas fa-award"></i></div>
+                    <h4>HRMA — Human Resources Management</h4>
+                    <p class="cert-issuer">MacNel Consult Limited</p>
+                    <p class="cert-date">Issued Jul 2021</p>
+                </div>
+
+                <div class="cert-card glass-card card-glow reveal-card shimmer">
+                    <div class="cert-icon"><i class="fas fa-flag"></i></div>
+                    <h4>Certificate of National Service</h4>
+                    <p class="cert-issuer">National Youth Service Corps</p>
+                    <p class="cert-date">Issued Jul 2022</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+  TESTIMONIALS
+  ============================================= -->
+    <section class="testimonials section-hidden" id="testimonials">
+        <div class="container">
+            <span class="section-tag">Testimonials</span>
+            <h2 class="section-title">What People <span>Say</span></h2>
+
+            <div class="testimonial-carousel-container">
+                <div class="testimonial-carousel-track" id="testimonialTrack">
+                    <div class="testimonial-card glass-card card-glow shimmer">
+                        <div class="testimonial-quote">"</div>
+                        <p>Joshua was honestly one of the standout students during the training. Very intentional,
+                            creative, and extremely detail-oriented.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">D</div>
+                            <div>
+                                <h4>Damilola Adebayo</h4>
+                                <p>VA Coach &amp; Automation Specialist</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card glass-card card-glow shimmer">
+                        <div class="testimonial-quote">"</div>
+                        <p>Joshua reached out and offered to build a portfolio for me. He understood exactly what would
+                            work for me.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">W</div>
+                            <div>
+                                <h4>Wendy Onyiuke</h4>
+                                <p>AI-Powered Workflow Designer</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card glass-card card-glow shimmer">
+                        <div class="testimonial-quote">"</div>
+                        <p>Joshua is not waiting for permission or the perfect opportunity. He's building, shipping, and
+                            showing what he can do in real time.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">D</div>
+                            <div>
+                                <h4>Damilola Adebayo</h4>
+                                <p>VA Coach &amp; Automation Specialist</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card glass-card card-glow shimmer">
+                        <div class="testimonial-quote">"</div>
+                        <p>Thank you so much Joshua for the gift. If you are looking to get a professional portfolio you
+                            can as well check him out.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">R</div>
+                            <div>
+                                <h4>Mbanugo Roseline Ogechukwu</h4>
+                                <p>Customer Support Specialist</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card glass-card card-glow shimmer">
+                        <div class="testimonial-quote">"</div>
+                        <p>I had the pleasure of working with Joshua during our project. He is dedicated, analytical,
+                            and an excellent team player.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">T</div>
+                            <div>
+                                <h4>Tiwa Adedeji</h4>
+                                <p>Virtual Assistant &amp; Administrative Support</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card glass-card card-glow shimmer">
+                        <div class="testimonial-quote">"</div>
+                        <p>Joshua's attention to detail and commitment to excellence is unmatched. I'm truly grateful
+                            for his work.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">O</div>
+                            <div>
+                                <h4>Olayinka Ogundeji</h4>
+                                <p>The Catalyst VA</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card glass-card card-glow shimmer">
+                        <div class="testimonial-quote">"</div>
+                        <p>Joshua is an exceptional developer and systems architect. He builds digital frameworks that
+                            work. Highly recommended.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">C</div>
+                            <div>
+                                <h4>Chidinma</h4>
+                                <p>Virtual Assistant</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card glass-card card-glow shimmer">
+                        <div class="testimonial-quote">"</div>
+                        <p>I was amazed at how quickly Joshua understood my brand and translated it into a stunning
+                            website. Seamless and stress-free.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">E</div>
+                            <div>
+                                <h4>Enobong Okon</h4>
+                                <p>Business Owner</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card glass-card card-glow shimmer">
+                        <div class="testimonial-quote">"</div>
+                        <p>Joshua's work ethic is outstanding. He delivered my portfolio website ahead of schedule with
+                            incredible attention to detail.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">R</div>
+                            <div>
+                                <h4>Mbanugo Roseline Ogechukwu</h4>
+                                <p>Customer Support Specialist</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card glass-card card-glow shimmer">
+                        <div class="testimonial-quote">"</div>
+                        <p>Joshua demonstrated exceptional project management skills during his internship. His ability
+                            to coordinate tasks and deliver results made him a valuable asset.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">E</div>
+                            <div>
+                                <h4>Excelerate</h4>
+                                <p>Project Management Partner</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card glass-card card-glow shimmer">
+                        <div class="testimonial-quote">"</div>
+                        <p>Joshua's data tracking and logistics management skills are exceptional. He maintained
+                            zero-error execution for 50+ trucks daily.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">P</div>
+                            <div>
+                                <h4>Pardee Food Nigeria</h4>
+                                <p>Logistics Partner</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card glass-card card-glow shimmer">
+                        <div class="testimonial-quote">"</div>
+                        <p>Joshua was a dedicated intern who quickly grasped automation engineering concepts. He
+                            contributed meaningfully to our IT infrastructure projects.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">C</div>
+                            <div>
+                                <h4>CodeAlpha</h4>
+                                <p>Automation Partner</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card glass-card card-glow shimmer">
+                        <div class="testimonial-quote">"</div>
+                        <p>Joshua's full-stack development skills were impressive during his internship. He showed great
+                            potential in automation engineering.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">D</div>
+                            <div>
+                                <h4>Decodelabs</h4>
+                                <p>Development Partner</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="testimonial-carousel-btn prev" id="testimonialPrev"><i
+                        class="fas fa-chevron-left"></i></button>
+                <button class="testimonial-carousel-btn next" id="testimonialNext"><i
+                        class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="testimonial-dots" id="testimonialDots"></div>
+        </div>
+    </section>
+
+    <!-- =============================================
+  LET'S CONNECT
+  ============================================= -->
+    <section class="lets-connect section-hidden" id="lets-connect">
+        <div class="container">
+            <span class="section-tag" style="color:var(--teal); border-color:rgba(0,188,212,0.3);">Let's Connect</span>
+            <h2 class="section-title">Ready to <span>Optimize</span> Your Business Ecosystem?</h2>
+            <p class="section-sub" style="margin:0 auto 32px;">If your business requires high-level administrative
+                stability, clean data tracking, or a professional web presence built with architectural intent — let's
+                connect.</p>
+
+            <div class="connect-grid">
+                <div class="connect-card glass-card card-glow reveal-card shimmer">
+                    <div class="connect-icon"><i class="fas fa-calendar-plus"></i></div>
+                    <h3>Book a Strategy Call</h3>
+                    <p>Schedule a free consultation</p>
+                    <a href="https://calendar.app.google/Gw2N76k5owUny1qT8" target="_blank" rel="noopener"
+                        class="btn btn-primary btn-block btn-ripple">
+                        <i class="fas fa-calendar-plus"></i> Book Now
+                    </a>
+                </div>
+
+                <div class="connect-card glass-card card-glow reveal-card shimmer">
+                    <div class="connect-icon"><i class="fas fa-envelope"></i></div>
+                    <h3>Send a Message</h3>
+                    <p>Direct email for inquiries</p>
+                    <a href="mailto:obiorajoshua@gmail.com" class="btn btn-email btn-block btn-ripple">
+                        <i class="fas fa-envelope"></i> Send Email
+                    </a>
+                </div>
+
+                <div class="connect-card glass-card card-glow reveal-card shimmer">
+                    <div class="connect-icon"><i class="fab fa-whatsapp"></i></div>
+                    <h3>Chat on WhatsApp</h3>
+                    <p>Quick chat for urgent matters</p>
+                    <a href="https://wa.me/2347062547022" target="_blank" rel="noopener"
+                        class="btn btn-whatsapp btn-block btn-ripple">
+                        <i class="fab fa-whatsapp"></i> Chat Now
+                    </a>
+                </div>
+
+                <div class="connect-card glass-card card-glow reveal-card shimmer">
+                    <div class="connect-icon"><i class="fas fa-download"></i></div>
+                    <h3>Download Resume</h3>
+                    <p>View my professional experience</p>
+                    <a href="./assets/Joshua_Resume.pdf" download class="btn btn-outline-light btn-block">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+  CONTACT
+  ============================================= -->
+    <section class="contact section-hidden" id="contact">
+        <div class="container">
+            <span class="section-tag">Contact</span>
+            <h2 class="section-title">Get in <span>Touch</span></h2>
+
+            <div class="contact-grid">
+                <div class="contact-info glass-card card-glow shimmer">
+                    <div class="contact-detail">
+                        <i class="fas fa-user"></i>
+                        <div>
+                            <h4>Joshua Obiora</h4>
+                            <p>Virtual Systems Architect · Virtual Assistant · Full-Stack Developer</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Lagos State, Nigeria · Remote</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>07062547022</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>obiorajoshua@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-social">
+                        <a href="https://www.linkedin.com/in/joshua-obiora" target="_blank" rel="noopener"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/IamSalvation" target="_blank" rel="noopener" aria-label="GitHub"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/i_amsalvation" target="_blank" rel="noopener"
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/i_amsalvation" target="_blank" rel="noopener" aria-label="X/Twitter"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="https://wa.me/2347062547022" target="_blank" rel="noopener" aria-label="WhatsApp"><i
+                                class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-form glass-card card-glow shimmer">
+                    <form id="contactForm" action="https://formspree.io/f/mwvdqnly" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your name" required />
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Email address" required />
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Tell me about your business needs..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit btn-ripple">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+  FOOTER
+  ============================================= -->
+    <footer>
+        <div class="container">
+            <p>© 2026 Joshua Obiora · Virtual Systems Architect &amp; VA</p>
+            <p class="footer-tagline">Architecture over Hustle</p>
+        </div>
+    </footer>
+
+    <!-- =============================================
+  BACK TO TOP
+  ============================================= -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
